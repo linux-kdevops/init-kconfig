@@ -5,8 +5,9 @@ PATCHLEVEL = 19
 SUBLEVEL = 0
 EXTRAVERSION = -rc6
 
-PHONY += all
-all: example
+all:
+	$(MAKE) defconfig-foo
+	$(MAKE) example
 
 export KCONFIG_DIR=$(CURDIR)/scripts/kconfig
 include $(KCONFIG_DIR)/kconfig.Makefile

@@ -6,10 +6,11 @@ SUBLEVEL = 0
 EXTRAVERSION = -rc6
 
 all:
-	$(MAKE) defconfig-foo
+	$(MAKE) defconfig-yamltest
 	$(MAKE) example
 
 export KCONFIG_DIR=$(CURDIR)/scripts/kconfig
+export KCONFIG_YAMLCFG=$(CURDIR)/extra_vars.yaml
 include $(KCONFIG_DIR)/kconfig.Makefile
 include Makefile.subtrees
 

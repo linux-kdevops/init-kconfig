@@ -25,3 +25,41 @@ config ALPHA
 	bool "Alpha support"
 	help
 	  This enables alpha. An example directory depenency.
+
+config BETA
+	bool "Beta support"
+	default y
+	output yaml
+	help
+	  This enables beta. We will use this for some workflow which
+	  wants a slim yaml file.
+
+if BETA
+
+config BETA_NAME
+	string "The project beta name"
+	default "Third body problem"
+	output yaml
+	help
+	  The name for the project.
+
+config BETA_NUM
+	int "The number of objects"
+	default 3
+	output yaml
+
+config BETA_HEX
+	hex "Special sause for beta"
+	default A
+	output yaml
+
+endif
+
+config GAMA
+	bool "Gama"
+	default y
+	output yaml
+	help
+	  Note that even if you set seomething as a bool and default to y, if
+	  you selectively disable it, you won't get a yaml bool as False, and
+	  so we should use false as deafults in most things.

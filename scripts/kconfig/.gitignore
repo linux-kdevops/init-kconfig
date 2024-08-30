@@ -13,4 +13,15 @@ nconf
 qconf
 gconf
 
+parser.tab.h
 parser.tab.c
+
+*.o
+*.o.cmd
+
+lxdialog/*.o.cmd
+lxdialog/*.o
+
+*conf-bin
+*conf-cflags
+*conf-libs

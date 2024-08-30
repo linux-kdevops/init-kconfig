@@ -1,10 +1,10 @@
 # If you need to use a git subtree, please add it here.
 add-kconfig-remote:
-	git remote add kconfig https://github.com/mcgrof/kconfig.git
+	git remote add kdevops-kconfig https://github.com/linux-kdevops/kconfig.git
 
 add-kconfig:
-	git subtree add --prefix=scripts/kconfig/ kconfig master
+	git subtree add --prefix=scripts/kconfig/ kdevops-kconfig master
 
 refresh-kconfig:
 	git fetch kconfig
-	git subtree pull --prefix=scripts/kconfig/ kconfig master
+	git subtree pull --prefix=scripts/kconfig/ kdevops-kconfig yamlconfig
